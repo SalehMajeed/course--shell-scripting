@@ -1,15 +1,17 @@
-#! /bin/bash
-# this is the comment
-echo "Hello World" # this is also the comment
+# User Input
+echo "Enter user name : "
+read name
+echo "User name is : $name"
 
-# System variables
-echo Our shell name is $BASH
-echo Our shell version name is $BASH_VERSION
-echo Our home directory is $HOME
-echo Our current working directory is $PWD
+read -p "Enter another name : " name
+echo "Another user is $name"
+read -sp "Enter password : " name
+echo "password is $name"
 
-# User Variables
-name= BASH
-VAL=10
-echo The name is $name
-echo The value is $VAL
+echo "Enter multiple names"
+read -a names
+echo ${names[0]} ${names[1]}
+
+echo "Enter default values"
+read
+echo $REPLY
